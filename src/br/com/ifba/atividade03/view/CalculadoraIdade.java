@@ -35,7 +35,8 @@ public class CalculadoraIdade extends javax.swing.JFrame {
         lblResultado = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Calculadora de Idade");
 
         lblNascimento.setText("Ano de Nascimento");
 
@@ -102,8 +103,10 @@ public class CalculadoraIdade extends javax.swing.JFrame {
 
     private void bntCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntCalcularActionPerformed
         // TODO add your handling code here:
+        
+        //pega o ano de nascimento
      int anoNascimento = (int) spnAnoNascimento.getValue();
-     
+     //se for menor que o ano atual faz a subtraçao 
      if(anoNascimento <= 2025){
          int idade = 2025 - anoNascimento;
          lblResultado.setText("" + idade);  
