@@ -160,12 +160,13 @@ public class RepeticaoSlide extends javax.swing.JFrame {
     private void bntContarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntContarActionPerformed
         // TODO add your handling code here:
         
+        //cria 3 variaveis para receber valor do slider
         int i = sldInicio.getValue();
         int f = sldFim.getValue();
         int p = sldPasso.getValue();
         
         DefaultListModel lista = new DefaultListModel();
-        
+        //faz a contagem dos valores escolhidos pelo usuario e lista
         for(int c = i; c <= f; c += p){
             lista.addElement(c);
         }
@@ -176,6 +177,7 @@ public class RepeticaoSlide extends javax.swing.JFrame {
     private void sldInicioStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_sldInicioStateChanged
         // TODO add your handling code here:
         
+        //tira o que ta no slide e mostra no label
         int inicio = sldInicio.getValue();
        lblInicio.setText(Integer.toString(inicio));
        
@@ -186,6 +188,7 @@ public class RepeticaoSlide extends javax.swing.JFrame {
     private void sldFimStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_sldFimStateChanged
         // TODO add your handling code here:
         
+        //tira o que ta no slide e mostra no label
         int fim = sldFim.getValue();
         lblFim.setText(Integer.toString(fim));
         
@@ -195,6 +198,7 @@ public class RepeticaoSlide extends javax.swing.JFrame {
     private void sldPassoStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_sldPassoStateChanged
         // TODO add your handling code here:
         
+        //tira o que ta no slide e mostra no label
         int passo = sldPasso.getValue();
         lblPasso.setText(Integer.toString(passo));
         
